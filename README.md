@@ -1,10 +1,8 @@
 
-This repo is for patching epsonscan2 to work on Arch based Linux.
-De standard AUR version misses a important patch that prohibite some scanners to even open or finding a connected scanner
+This repo is a mirror/testbench of AUR package for epsonscan2 to test changes in the epsonscan2 source code
 
 Changelog:<br>
-Updated to version 6.7.87.0<br>
-Updated to version 6.7.82.0
+Updated to version 6.7.93.0<br>
 
 First install all depencencies:<br>
 yay -S libjpeg-turbo libpng libtiff libusb qt5-base sane zlib boost cmake qt5-singlecoreapplication rapidjson bbe libharu
@@ -15,10 +13,7 @@ cd aur_epsonscan2
 
 makepkg -si
 
-Install epsonscan2 non free plugin:<br>
-yay epsonscan2-non-free-plugin
-
-The non free plugin is not only for OCR or Wireless scanning, some models do need a proprietary firmware!
+The non free plugin (included in epsonscan2 pkgbuild) is not only for OCR or Wireless scanning, some models do need a proprietary firmware!
 Here is a list of models that need firmware, get the device id through lsusb
 
 ATTRS{idProduct}=="0130", ENV{epsonscan2_driver}="esci", ENV{firmware_file}="esfw7c.bin"<br>
